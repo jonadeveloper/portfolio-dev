@@ -1,5 +1,6 @@
 ---
 import Header from "../components/Header.astro";
+import "@fontsource-variable/onest";
 ---
 
 <!doctype html>
@@ -9,7 +10,7 @@ import Header from "../components/Header.astro";
     <meta name="viewport" content="width=device-width" />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <meta name="generator" content={Astro.generator} />
-    <title>Astro Basics</title>
+    <title>portfolio jonadev</title>
   </head>
   <body>
     <Header />
@@ -22,12 +23,14 @@ import Header from "../components/Header.astro";
     color-scheme: light dark;
   }
   html {
-    font-family: system-ui, sans-serif;
-    background: #000000;
+    font-family: "Onest Variable", sans-serif;
+    background: #240035;
   }
   ,
   body {
     display: flex;
+    flex-direction: column;
     justify-content: center;
+    height: 100vh;
   }
 </style>
