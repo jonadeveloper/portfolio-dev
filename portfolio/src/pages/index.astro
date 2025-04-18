@@ -1,22 +1,51 @@
 ---
 import Badge from "../components/Badge.astro";
 import Layout from "../layouts/Layout.astro";
+import SocialPill from "../components/SocialPill.astro";
+import GithubIcon from "../icons/Github.astro";
+import LinkedinIcon from "../icons/Linkedin.astro";
+import EmailIcon from "../icons/Email.astro";
 import "../styles/global.css";
 ---
 
-<Layout>
+<Layout
+  title="portfolio de jonadev - Desarrollador y Programador Web Freelance con +2 años de experiencia"
+  description="Bienvenidos a mi portfolio. Soy Jonadev y estoy abierto a nuevas propuestas. Contactame y hablemos de tu proyecto."
+>
   <main>
     <section class="w-full lg:w-[740px] mx-auto py-40">
-      <h1 class="text-white text-5xl font-bold flex flex-row gap-x-4 pb-4">
-        Hola, soy jonadev
-        <div class="flex justify-center items-center">
-          <Badge>disponible para trabajar</Badge>
-        </div>
+      <h1 class="text-white text-5xl font-bold flex flex-row gap-x-4 pb-10">
+        Hola, soy Jonadev
+        <a
+          href="https://www.linkedin.com/in/jonatan-villalva-fullstack-developer/"
+          target="_blank"
+          rel="noopener"
+          class="flex justify-center items-center"
+        >
+          <Badge>Disponible para trabajar</Badge>
+        </a>
       </h1>
-      <h2 class="text-xl">
+      <h2 class="text-xl opacity-65 text-wrap">
         Desarrollador web con +2 años de experiencia como freelance y creador de
-        contenido. De Buenos Aires, Argentina.
+        contenido. De Buenos Aires, Argentina. Enfrento cada proyecto o desafío
+        con la convicción de que todo puede mejorar.
       </h2>
+      <nav class="flex gap-x-4 mt-8">
+        <SocialPill
+          href="https://www.linkedin.com/in/jonatan-villalva-fullstack-developer"
+        >
+          <LinkedinIcon class="size-6" />
+          Linkedin
+        </SocialPill>
+        <SocialPill href="https://github.com/jonadeveloper/">
+          <GithubIcon class="size-6" />
+          GitHub
+        </SocialPill>
+        <SocialPill href="mailto:jvillalva.sistemas@gmail.com">
+          <EmailIcon class="size-6" />
+          Email
+        </SocialPill>
+      </nav>
     </section>
   </main>
 </Layout>

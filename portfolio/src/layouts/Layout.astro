@@ -7,10 +7,11 @@ import "@fontsource-variable/onest";
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
+    <meta name="description" content={Astro.props.description} />
     <meta name="viewport" content="width=device-width" />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <meta name="generator" content={Astro.generator} />
-    <title>portfolio jonadev</title>
+    <title>{Astro.props.title}</title>
   </head>
   <body>
     <Header />
@@ -24,13 +25,12 @@ import "@fontsource-variable/onest";
   }
   html {
     font-family: "Onest Variable", sans-serif;
-    background: #240035;
+    background: #000000;
   }
   ,
   body {
     display: flex;
     flex-direction: column;
-    justify-content: center;
     height: 100vh;
   }
 </style>
