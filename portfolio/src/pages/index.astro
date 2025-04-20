@@ -1,11 +1,14 @@
 ---
 import Badge from "../components/Badge.astro";
 import Layout from "../layouts/Layout.astro";
+import SectionContainer from "../components/SectionContainer.astro";
 import SocialPill from "../components/SocialPill.astro";
 import GithubIcon from "../icons/Github.astro";
 import LinkedinIcon from "../icons/Linkedin.astro";
 import EmailIcon from "../icons/Email.astro";
 import "../styles/global.css";
+import Experience from "../components/Experience.astro";
+import Briefcase from "../icons/Briefcase.astro";
 ---
 
 <Layout
@@ -13,7 +16,7 @@ import "../styles/global.css";
   description="Bienvenidos a mi portfolio. Soy Jonadev y estoy abierto a nuevas propuestas. Contactame y hablemos de tu proyecto."
 >
   <main>
-    <section class="w-full lg:w-[740px] mx-auto py-40">
+    <SectionContainer class="py-44 pb-24">
       <h1 class="text-white text-5xl font-bold flex flex-row gap-x-4 pb-10">
         Hola, soy Jonadev
         <a
@@ -47,6 +50,13 @@ import "../styles/global.css";
           Email
         </SocialPill>
       </nav>
-    </section>
+    </SectionContainer>
+    <SectionContainer id="experience">
+      <h2 class="text-4xl font-semibold mb-6 flex gap-x-3 items-center">
+        <Briefcase class="size-7" />
+        Experiencia laboral
+      </h2>
+      <Experience />
+    </SectionContainer>
   </main>
 </Layout>
