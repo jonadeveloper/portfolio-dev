@@ -9,15 +9,18 @@ import EmailIcon from "../icons/Email.astro";
 import "../styles/global.css";
 import Experience from "../components/Experience.astro";
 import Briefcase from "../icons/Briefcase.astro";
+import Project from "../icons/Project.astro";
 ---
 
 <Layout
   title="portfolio de jonadev - Desarrollador y Programador Web Freelance con +2 años de experiencia"
   description="Bienvenidos a mi portfolio. Soy Jonadev y estoy abierto a nuevas propuestas. Contactame y hablemos de tu proyecto."
 >
-  <main>
-    <SectionContainer class="py-44 pb-24">
-      <h1 class="text-white text-5xl font-bold flex flex-row gap-x-4 pb-10">
+  <main class="px-4">
+    <SectionContainer class="py-44 pb-28">
+      <h1
+        class="text-white text-3xl md:text-4xl lg:text-5xl font-bold flex flex-row gap-x-4 pb-6 lg:pb-10"
+      >
         Hola, soy Jonadev
         <a
           href="https://www.linkedin.com/in/jonatan-villalva-fullstack-developer/"
@@ -28,25 +31,25 @@ import Briefcase from "../icons/Briefcase.astro";
           <Badge>Disponible</Badge>
         </a>
       </h1>
-      <h2 class="text-xl opacity-85 text-wrap">
+      <h2 class="text-xl lg:text-2xl opacity-85 text-wrap max-w-[700px]">
         +2 años de experiencia como <span class="text-cyan-500 font-bold"
           >Desarrollador web freelance y creador de contenido.</span
         > De Buenos Aires, Argentina. Enfrento cada proyecto o desafío con la convicción
         de que todo puede mejorar.
       </h2>
-      <nav class="flex gap-x-4 mt-8">
+      <nav class="flex gap-4 mt-8 flex-wrap">
         <SocialPill
           href="https://www.linkedin.com/in/jonatan-villalva-fullstack-developer"
         >
-          <LinkedinIcon class="size-6" />
+          <LinkedinIcon class="size-4 md:size-6" />
           Linkedin
         </SocialPill>
         <SocialPill href="https://github.com/jonadeveloper/">
-          <GithubIcon class="size-6" />
+          <GithubIcon class="size-4 md:size-6" />
           GitHub
         </SocialPill>
         <SocialPill href="mailto:jvillalva.sistemas@gmail.com">
-          <EmailIcon class="size-6" />
+          <EmailIcon class="size-4 md:size-6" />
           Email
         </SocialPill>
       </nav>
@@ -55,6 +58,13 @@ import Briefcase from "../icons/Briefcase.astro";
       <h2 class="text-4xl font-semibold mb-6 flex gap-x-3 items-center">
         <Briefcase class="size-7" />
         Experiencia laboral
+      </h2>
+      <Experience />
+    </SectionContainer>
+    <SectionContainer id="projects">
+      <h2 class="text-4xl font-semibold mb-6 flex gap-x-3 items-center">
+        <Project class="size-7" />
+        Proyectos
       </h2>
       <Experience />
     </SectionContainer>

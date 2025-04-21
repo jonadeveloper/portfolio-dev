@@ -1,5 +1,6 @@
 ---
 import Header from "../components/Header.astro";
+import Footer from "../components/Footer.astro";
 import "@fontsource-variable/onest";
 ---
 
@@ -16,6 +17,7 @@ import "@fontsource-variable/onest";
   <body>
     <Header />
     <slot />
+    <Footer />
   </body>
 </html>
 
@@ -33,5 +35,9 @@ import "@fontsource-variable/onest";
     display: flex;
     flex-direction: column;
     min-height: 100vh;
+  }
+
+  media = "(prefers-reduced-motion: reduce)" {
+    scroll-behavior: auto;
   }
 </style>
