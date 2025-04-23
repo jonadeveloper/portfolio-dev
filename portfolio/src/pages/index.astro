@@ -10,6 +10,7 @@ import "../styles/global.css";
 import Experience from "../components/Experience.astro";
 import Briefcase from "../icons/Briefcase.astro";
 import Project from "../icons/Project.astro";
+import Projects from "../components/Projects.astro";
 ---
 
 <Layout
@@ -17,7 +18,7 @@ import Project from "../icons/Project.astro";
   description="Bienvenidos a mi portfolio. Soy Jonadev y estoy abierto a nuevas propuestas. Contactame y hablemos de tu proyecto."
 >
   <main class="px-4">
-    <SectionContainer class="py-44 pb-28">
+    <SectionContainer class="py-44 pb-32">
       <h1
         class="text-white text-3xl md:text-4xl lg:text-5xl font-bold flex flex-row gap-x-4 pb-6 lg:pb-10"
       >
@@ -55,18 +56,18 @@ import Project from "../icons/Project.astro";
       </nav>
     </SectionContainer>
     <SectionContainer id="experience">
-      <h2 class="text-4xl font-semibold mb-6 flex gap-x-3 items-center">
+      <h2 class="text-3xl font-semibold mb-6 flex gap-x-3 items-center">
         <Briefcase class="size-7" />
         Experiencia laboral
       </h2>
       <Experience />
     </SectionContainer>
     <SectionContainer id="projects">
-      <h2 class="text-4xl font-semibold mb-6 flex gap-x-3 items-center">
+      <h2 class="text-3xl font-semibold mb-6 flex gap-x-3 items-center">
         <Project class="size-7" />
-        Proyectos
+        Proyectos Destacados
       </h2>
-      <Experience />
+      <Projects />
     </SectionContainer>
   </main>
 </Layout>

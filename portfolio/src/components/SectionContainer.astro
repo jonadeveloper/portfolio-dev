@@ -2,6 +2,6 @@
 const { class: clasName, id } = Astro.props;
 ---
 
-<section id={id} class={`w-full lg:w-[740px] mx-auto py-5 ${clasName}`}>
+<section id={id} class={`${clasName} w-full lg:w-[740px] mx-auto pb-24 `}>
   <slot />
 </section>

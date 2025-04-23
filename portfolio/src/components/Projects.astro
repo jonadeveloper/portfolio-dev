@@ -1,13 +1,83 @@
 ---
+import AstroIcon from "../icons/AstroIcon.astro";
+import CssIcon from "../icons/CssIcon.astro";
+import HtmlIcon from "../icons/HtmlIcon.astro";
+import NodejsIcon from "../icons/NodejsIcon.astro";
+import ReactIcon from "../icons/ReactIcon.astro";
+import TailwindIcon from "../icons/TailwindIcon.astro";
+import WordpressIcon from "../icons/WordpressIcon.astro";
+const TAGS = {
+  Astro: {
+    name: "Astro",
+    class: "bg-black",
+    icon: AstroIcon,
+  },
+  Css: {
+    name: "Css",
+    class: "bg-black",
+    icon: CssIcon,
+  },
+  Html: {
+    name: "Astro",
+    class: "bg-black",
+    icon: HtmlIcon,
+  },
+  Nodejs: {
+    name: "NodeJs",
+    class: "bg-black",
+    icon: NodejsIcon,
+  },
+  React: {
+    name: "React",
+    class: "bg-black",
+    icon: ReactIcon,
+  },
+  Tailwind: {
+    name: "Tailwind",
+    class: "bg-black",
+    icon: TailwindIcon,
+  },
+  Wordpress: {
+    name: "Wordpress",
+    class: "bg-black",
+    icon: WordpressIcon,
+  },
+};
 const PROJECTS = [
   {
-    title: "",
-    description: "",
-    link: "",
-    github: "",
-    video: "",
-    image: "",
-    tags: [],
+    title: "Anime Argentina",
+    description: "sjsjsjsjsjsjs",
+    link: "https://animeargentina.net",
+    github: "djsjd",
+    video: "sdjdj",
+    image: "/jonadev.jpeg",
+    tags: [TAGS.React],
   },
 ];
 ---
+
+{
+  PROJECTS.map(({ title, description, tags, image }) => (
+    <article>
+      <h3 class="text-2xl font-semibold text-cyan-500 mb-2">{title}</h3>
+      <p class="text-lg mb-4 text-pretty">{description}</p>
+      <ul class="flex gap-x-4 flex-row">
+        {tags.map((tag) => (
+          <li>
+            <span
+              class={`flex gap-x-2 rounded-full text-xs ${tag.class} mb-2 py-1 px-2`}
+            >
+              <tag.icon class="size-4" />
+              {tag.name}
+            </span>
+          </li>
+        ))}
+      </ul>
+      <img
+        class="rounded shadow-2xl shadow-white/10"
+        src={image}
+        alt={`Captura de pantalla del proyecto ${title}`}
+      />
+    </article>
+  ))
+}
