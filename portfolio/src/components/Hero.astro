@@ -1,0 +1,55 @@
+---
+const personalImageAlt = "Jona Dev";
+import Badge from "./Badge.astro";
+import LinkedInIcon from "../icons/Linkedin.astro";
+import MailIcon from "../icons/Email.astro";
+import GitHubIcon from "../icons/Github.astro";
+import SocialPill from "./SocialPill.astro";
+---
+
+<div class="max-w-xl">
+  <div class="flex gap-4 mb-4">
+    <img
+      class="rounded-full shadow-lg size-16"
+      src="/profile1.jpeg"
+      alt={personalImageAlt}
+    />
+    <a
+      href="https://linkedin.com/in/midudev"
+      target="_blank"
+      rel="noopener"
+      class="flex items-center transition md:justify-center md:hover:scale-105"
+    >
+      <Badge>Disponible para trabajar</Badge>
+    </a>
+  </div>
+  <h1
+    class="text-4xl font-bold tracking-tight text-gray-800 sm:text-5xl dark:text-white"
+  >
+    Hola, soy Jonadev
+  </h1>
+  <p
+    class="mt-6 text-xl text-gray-800 dark:[&>strong]:text-yellow-200 [&>strong]:text-yellow-500 [&>strong]:font-semibold dark:text-gray-300"
+  >
+    +2 años de experiencia como <span class="text-cyan-500 font-bold"
+      >Desarrollador web freelance y creador de contenido.</span
+    > De Buenos Aires, Argentina. Enfrento cada proyecto o desafío con la convicción
+    de que todo puede mejorar.
+  </p>
+  <nav class="flex flex-wrap gap-4 mt-8">
+    <SocialPill
+      href="https://www.linkedin.com/in/jonatan-villalva-fullstack-developer"
+    >
+      <LinkedInIcon class="size-4 md:size-6" />
+      Linkedin
+    </SocialPill>
+    <SocialPill href="https://github.com/jonadeveloper/">
+      <GitHubIcon class="size-4 md:size-6" />
+      GitHub
+    </SocialPill>
+    <SocialPill href="mailto:jvillalva.sistemas@gmail.com">
+      <MailIcon class="size-4 md:size-6" />
+      Email
+    </SocialPill>
+  </nav>
+</div>
