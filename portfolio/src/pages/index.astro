@@ -1,17 +1,14 @@
 ---
-import Badge from "../components/Badge.astro";
+import AboutMe from "../components/AboutMe.astro";
 import Hero from "../components/Hero.astro";
 import Layout from "../layouts/Layout.astro";
 import SectionContainer from "../components/SectionContainer.astro";
-import SocialPill from "../components/SocialPill.astro";
-import GithubIcon from "../icons/Github.astro";
-import LinkedinIcon from "../icons/Linkedin.astro";
-import EmailIcon from "../icons/Email.astro";
 import "../styles/global.css";
 import Experience from "../components/Experience.astro";
 import Briefcase from "../icons/Briefcase.astro";
 import Project from "../icons/Project.astro";
 import Projects from "../components/Projects.astro";
+import TitleSection from "../components/TitleSection.astro";
 ---
 
 <Layout
@@ -19,22 +16,30 @@ import Projects from "../components/Projects.astro";
   description="Bienvenidos a mi portfolio. Soy Jonadev y estoy abierto a nuevas propuestas. Contactame y hablemos de tu proyecto."
 >
   <main class="px-4">
-    <SectionContainer class="py-44 pb-32">
-      <Hero />
+    <SectionContainer class="py-16 md:py-36">
+      <Hero>
+        <slot />
+      </Hero>
     </SectionContainer>
-    <SectionContainer id="experience">
-      <h2 class="text-3xl font-semibold mb-6 flex gap-x-3 items-center pt-20">
-        <Briefcase class="size-7" />
-        Experiencia laboral
-      </h2>
-      <Experience />
-    </SectionContainer>
-    <SectionContainer id="projects">
-      <h2 class="text-3xl font-semibold mb-6 flex gap-x-3 items-center pt-20">
-        <Project class="size-7" />
-        Proyectos Destacados
-      </h2>
-      <Projects />
-    </SectionContainer>
+    <div class="space-y-24">
+      <SectionContainer id="experience">
+        <TitleSection>
+          <Briefcase class="size-7" />
+          Experiencia laboral
+        </TitleSection>
+        <Experience />
+      </SectionContainer>
+      <SectionContainer id="projects">
+        <TitleSection>
+          <Project class="size-7" />
+          Proyectos Destacados
+        </TitleSection>
+        <Projects />
+      </SectionContainer>
+      <SectionContainer id="sobre-mi">
+        <TitleSection> Sobre mi </TitleSection>
+        <AboutMe />
+      </SectionContainer>
+    </div>
   </main>
 </Layout>
