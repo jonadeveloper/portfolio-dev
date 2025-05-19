@@ -6,6 +6,7 @@ import SectionContainer from "../components/SectionContainer.astro";
 import "../styles/global.css";
 import Experience from "../components/Experience.astro";
 import Briefcase from "../icons/Briefcase.astro";
+import ProfileCheck from "../icons/ProfileCheck.astro";
 import Project from "../icons/Project.astro";
 import Projects from "../components/Projects.astro";
 import TitleSection from "../components/TitleSection.astro";
@@ -37,7 +38,10 @@ import TitleSection from "../components/TitleSection.astro";
         <Projects />
       </SectionContainer>
       <SectionContainer id="sobre-mi">
-        <TitleSection> Sobre mi </TitleSection>
+        <TitleSection>
+          <ProfileCheck class="size-8" />
+          Sobre mi
+        </TitleSection>
         <AboutMe />
       </SectionContainer>
     </div>
