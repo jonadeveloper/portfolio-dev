@@ -3,12 +3,12 @@ import LinkInline from "./LinkInline.astro";
 
 interface Props {
   title: string;
-  // company: string;
+  company: string;
   description: string;
   link?: string;
   date: string;
 }
-const { date, title, description, link } = Astro.props;
+const { date, title, company, description, link } = Astro.props;
 ---
 
 <div
@@ -22,7 +22,7 @@ const { date, title, description, link } = Astro.props;
 
       <h3 class="text-xl font-bold text-cyan-500">{title}</h3>
       <h4 class="font-semibold text-xl text-gray-600 dark:text-white">
-        <!-- {company} -->
+        {company}
       </h4>
       <time class="p-0 m-0 text-sm text-gray-600/80 dark:text-white/80"
         >{date}</time
